@@ -26,6 +26,7 @@ datalab
 ```
 这几个文件其实就是原网站上面的文件，只不过帮你下载好了。
 原网站的datalab相关内容在这里：http://csapp.cs.cmu.edu/3e/labs.html
+
 由于我们没有教育邮箱，所以不能登录（点 Data Lab 会提示登录），但是这个网站也提供了直接下载链接（点 Data Lab 后面的文件可以直接下载，设计的很奇葩）。
 
 - datalab-handout：这个是 datalab-handout.tar 解压后的产物
