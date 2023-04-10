@@ -1,0 +1,29 @@
+(gdb) disas initialize_bomb
+Dump of assembler code for function initialize_bomb:
+   0x00000000004013a2 <+0>:     sub    $0x8,%rsp
+   0x00000000004013a6 <+4>:     mov    $0x4012a0,%esi
+   0x00000000004013ab <+9>:     mov    $0x2,%edi
+   0x00000000004013b0 <+14>:    callq  0x400b90 <signal@plt>
+   0x00000000004013b5 <+19>:    add    $0x8,%rsp
+   0x00000000004013b9 <+23>:    retq   
+End of assembler dump.
+(gdb) disas 0x4012a0
+Dump of assembler code for function sig_handler:
+   0x00000000004012a0 <+0>:     sub    $0x8,%rsp
+   0x00000000004012a4 <+4>:     mov    $0x4024c0,%edi
+   0x00000000004012a9 <+9>:     callq  0x400b10 <puts@plt>
+   0x00000000004012ae <+14>:    mov    $0x3,%edi
+   0x00000000004012b3 <+19>:    callq  0x400c50 <sleep@plt>
+   0x00000000004012b8 <+24>:    mov    $0x402582,%esi
+   0x00000000004012bd <+29>:    mov    $0x1,%edi
+   0x00000000004012c2 <+34>:    mov    $0x0,%eax
+   0x00000000004012c7 <+39>:    callq  0x400c00 <__printf_chk@plt>
+   0x00000000004012cc <+44>:    mov    0x20246d(%rip),%rdi        # 0x603740 <stdout@@GLIBC_2.2.5>
+   0x00000000004012d3 <+51>:    callq  0x400be0 <fflush@plt>
+   0x00000000004012d8 <+56>:    mov    $0x1,%edi
+   0x00000000004012dd <+61>:    callq  0x400c50 <sleep@plt>
+   0x00000000004012e2 <+66>:    mov    $0x40258a,%edi
+   0x00000000004012e7 <+71>:    callq  0x400b10 <puts@plt>
+   0x00000000004012ec <+76>:    mov    $0x10,%edi
+   0x00000000004012f1 <+81>:    callq  0x400c20 <exit@plt>
+End of assembler dump.

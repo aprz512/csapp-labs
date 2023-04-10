@@ -1,0 +1,13 @@
+Dump of assembler code for function strings_not_equal:
+=> 0x0000000000401338 <+0>:     push   %r12
+   0x000000000040133a <+2>:     push   %rbp
+   0x000000000040133b <+3>:     push   %rbx
+   0x000000000040133c <+4>:     mov    %rdi,%rbx
+   0x000000000040133f <+7>:     mov    %rsi,%rbp
+   0x0000000000401342 <+10>:    callq  0x40131b <string_length>             // 这里获取输入的字符串的长度
+   0x0000000000401347 <+15>:    mov    %eax,%r12d
+   0x000000000040134a <+18>:    mov    %rbp,%rdi
+   0x000000000040134d <+21>:    callq  0x40131b <string_length>             // 这里获取 phase_1 里面的字符串的长度，追进去，查看寄存器 rdi 的地址，即为字符串的地址，打印出来即可
+
+(gdb) p (char*)0x402400
+$1 = 0x402400 "Border relations with Canada have never been better."
